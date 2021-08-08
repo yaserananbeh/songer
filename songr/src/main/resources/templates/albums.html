@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav>
+        <h1>Songer App</h1>
+    </nav>
+</header>
+<main>
+    <h1>List of Albums</h1>
+    <div class="eachAlbum" th:each="album: ${Albums}">
+        <div>
+            <p>
+                The album title :
+                <span th:text="${album.title}"></span>
+            </p>
+
+        </div>
+        <div>
+            <p>
+                The album artist :
+                <span th:text="${album.artist}"></span>
+            </p>
+
+        </div>
+        <div>
+            <p>
+                The album song count :
+                <span th:text="${album.songCount}"></span>
+            </p>
+
+        </div>
+        <div>
+            <p>
+                The album length :
+                <span th:text="${album.length}"></span>
+            </p>
+
+        </div>
+        <img class="cardImage" th:src="${album.imageUrl}"/>
+<!--        <div>-->
+<!--            <p>-->
+<!--                The album img url :-->
+<!--                <span th:text="${album.imageUrl}"></span>-->
+<!--            </p>-->
+<!--        </div>-->
+
+
+    </div>
+</main>
+<footer>
+
+</footer>
+</body>
+</html>

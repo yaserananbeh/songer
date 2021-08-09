@@ -1,12 +1,11 @@
-package Controller;
+package com.example.songr.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-
 @Controller
-public class RootController {
-    @GetMapping("/")
+public class FormController {
+    @GetMapping("/form")
     public String getIndexPage(){
-        return "index.html";
+        return "form.html";
     }
 }

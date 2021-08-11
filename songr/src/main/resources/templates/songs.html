@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav>
+        <h1>Songer App</h1>
+    </nav>
+</header>
+<main>
+    <a class="addAlbumAnchor" href="http://localhost:8080/albums">Go to albums page</a>
+    <h1>List of Songs</h1>
+    <div class="eachAlbum" th:each="song: ${songs}">
+        <div>
+            <p>
+                The song title :
+                <span th:text="${song.title}"></span>
+            </p>
+
+        </div>
+        <div>
+            <p>
+                The song length :
+                <span th:text="${song.length}"></span>
+            </p>
+
+        </div>
+        <div>
+            <p>
+                The song trackNumber :
+                <span th:text="${song.trackNumber}"></span>
+            </p>
+
+        </div>
+        <div>
+            <p>
+                The album :
+                <span th:text="${song.albumTitle}"></span>
+            </p>
+
+        </div>
+
+        <img class="cardImage"
+             src="https://static01.nyt.com/images/2020/03/19/smarter-living/00well-handwashing-psa-music-notes/00well-handwashing-psa-music-notes-articleLarge-v3.gif?quality=75&auto=webp&disable=upscale"/>
+
+
+    </div>
+</main>
+<footer>
+
+</footer>
+</body>
+</html>

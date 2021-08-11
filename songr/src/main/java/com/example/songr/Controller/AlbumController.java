@@ -23,7 +23,6 @@ public class AlbumController {
     public RedirectView addBook(@ModelAttribute Album album,Model model) {
         model.addAttribute("album",album);
         albumRepository.save(album);
-        System.out.println(album);
         return new RedirectView("/albums");
     }
 }

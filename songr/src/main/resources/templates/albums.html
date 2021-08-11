@@ -14,7 +14,8 @@
 <main>
     <a class="addAlbumAnchor" href="http://localhost:8080/form">Add your own album</a>
     <h1>List of Albums</h1>
-    <div class="eachAlbum" th:each="album: ${Albums}">
+    <div class="eachAlbum" th:each="album: ${Albums}" >
+        <a  th:href="@{http://localhost:8080/showalbum(id=${album.id})}">Show Album songs</a>
         <div>
             <p>
                 The album title :
@@ -44,13 +45,6 @@
 
         </div>
         <img class="cardImage" th:src="${album.imageUrl}"/>
-<!--        <div>-->
-<!--            <p>-->
-<!--                The album img url :-->
-<!--                <span th:text="${album.imageUrl}"></span>-->
-<!--            </p>-->
-<!--        </div>-->
-
 
     </div>
 </main>
